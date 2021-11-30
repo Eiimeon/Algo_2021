@@ -63,6 +63,7 @@ def itérationPeano(T,n,length):
 
 #itérationPeano(T,5,1000)
 
+#ne fonctionne pas
 def intérationSierpinski(T,n,length):
     pas = length/2
     if n == 0 :
