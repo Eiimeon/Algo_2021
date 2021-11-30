@@ -3,8 +3,9 @@ from math import sqrt
 import random as rd
 
 
-#Exercice 1 :
+################Exercice 1 :
 
+#Dé comenter cette tortue pour toutes les fonctions utilisant une tortue
 #T=Turtle()
 
 def carre(T,size):
@@ -21,7 +22,7 @@ def cercle(T,radius):
 #cercle(T,100)
 
 
-#Exercice 2 :
+################Exercice 2 :
 
 '''T.speed(100)
 T.penup()
@@ -46,6 +47,8 @@ def escargotRond(T,size,steps):
 
 #escargotRond(T,500,100)
 
+################Exercice 3 :
+
 def marche(T,direction,pas): #direction fournie par la fonction randomDir, égale à 0,90,-90.
     T.left(direction)
     T.forward(pas)
@@ -62,6 +65,7 @@ def marcheAleatoire(T,pas):
     marche(T,randomDir(),pas)
     marcheAleatoire(T,pas)
 
+#fournit une liste de tortues de taille n  
 def multiTurtle(n):
     L=n*[0]
     for i in range(n):
@@ -97,7 +101,7 @@ delay(0)
 #print(randomColor())
 
 
-#Exercice 4 :
+################Exercice 4 :
 
 
 def randomPos(pas):
@@ -162,6 +166,8 @@ def murder(distances,tortues):
                 tortues[j].hideturtle()
                 tortues[j].penup()
                 tortues[j].setx(10000)
+    #Un peu galérien, mais essentiellement j'envoie le tortues mangées en x=10000 et interdis aux tortues x>5000 de manger
+    #A la fin, je supprime toutes les tortues avec x>5000 (donc les x=10000), et ça évite les problèmes d'indice.
     i=0
     while i<len(tortues):
         if tortues[i].xcor() > 5000 :
